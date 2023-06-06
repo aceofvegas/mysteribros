@@ -138,6 +138,10 @@ body {
 }
 
 .nav button {
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  color: var(--text-color);
   background-color: var(--nav-color);
   
 }
@@ -198,6 +202,9 @@ body {
 footer {
   padding: 20px;
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .article img {

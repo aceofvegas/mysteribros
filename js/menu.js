@@ -12,7 +12,7 @@ var menu = {
      // links 
      link1 : 'index.html',  // simply change these to change menu for whole site 
      link2 : "about.html", 
-     link3 : "games.html", 
+     link3 : "game.html", 
      link4 : "nft.html", 
      link5 : "more.html", 
      
