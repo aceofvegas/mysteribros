@@ -5,18 +5,18 @@ var menu = {
      l3 : "Games", 
      l4 : "NFTs", 
      l5 : "More",
-     l6 : "Testing1", // for the more menu
+     l6 : "Sports", // for the more menu
      l7 : "Testing2", // for the more menu
      l8 : "Testing3", // for the more menu
 
      // links 
      link1 : 'index.html',  // simply change these to change menu for whole site 
      link2 : "about.html", 
-     link3 : "game.html", 
+     link3 : "games.html", 
      link4 : "nft.html", 
      link5 : "more.html", 
      
-     link6 : "more.html", 
+     link6 : "sports.html", 
      link7 : "more.html", 
      link8 : "more.html", 
     

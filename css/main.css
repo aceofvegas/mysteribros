@@ -4,27 +4,33 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: lownue;
+  src: url(../fonts/LowballNeueRegular-rglJB.ttf);
+}
 
 /* Define CSS variables for colors */
 :root {
   --background-color: #f1f1f1;
-  --nav-color: #07011a;
+  --nav-color: #030033;
   --nav-text: white;
   --text-color: black;
   --link-color: blue;
   --button-color: blue;
   --button-text-color: white;
   --subtext-color: #2b2b2b;
+  --drophov-color: #0044ff;
 }
 /* Dark mode styles */
 .dark-mode {
-  --background-color: #08011c; /* Change the background color to black */
+  --background-color: #000018; /* Change the background color to black */
   --text-color: white; /* Change the text color to white */
   --link-color: white; /* Change the link color to white */
   --button-color: blue; /* Change the button color to red */
   --nav-color: #000000;
-  --nav-text: white;
+  --nav-text: rgb(233, 233, 233);
   --subtext-color: #c2c2c2;
+  --drophov-color: #0044ff;
 }
 
 
@@ -34,7 +40,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: vw100;
   margin: 0 auto;
 }
 
@@ -55,6 +61,8 @@ body {
   background-color: var(--nav-color);
   width: 100%;
   padding: 0.4em;
+  font-family: lownue;
+  position: fixed;
 }
 
 /* Links inside the navbar */
@@ -138,7 +146,7 @@ body {
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: var(--drophov-color);
 }
 
 /* Show the dropdown menu on hover */
@@ -174,9 +182,6 @@ body {
   gap: 20px;
 }
 
-.story {
-  border: 1px solid gray;
-}
 
 .story img {
   width: 100%;
@@ -191,6 +196,43 @@ body {
 }
 
 .story a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--button-text-color);
+  background-color: var(--button-color);
+}
+
+.sports-header {
+  padding: 20px;
+}
+
+.sports-header h2 {
+  text-align: center;
+  margin-bottom: 2.5%;
+}
+
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+.sport img {
+  width: 100%;
+}
+
+.sport h3 {
+  padding: 10px;
+}
+
+.sport p {
+  padding: 10px;
+}
+
+.sport a {
   display: block;
   padding: 10px;
   text-align: center;
