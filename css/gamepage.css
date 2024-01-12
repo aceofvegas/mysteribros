@@ -1,0 +1,30 @@
+:root {
+	--gp-button-color: #088cff;
+	--gp-button-text-color: white;
+}
+
+#gamelist p {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#gamelist ul {
+  list-style-type: none;
+  margin: auto;
+}
+
+#gamelist a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--gp-button-text-color);
+  background-color: var(--gp-button-color);
+  border-radius: 10px;
+  margin: 2.5vh;
+}
+
+#gamelist a:hover {
+  background-color: lightblue;
+}

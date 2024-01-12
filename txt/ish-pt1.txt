@@ -1,0 +1,7 @@
+
+## Step 1: install iSH 
+- On the App Store, search for ish or <a href="https://apps.apple.com/us/app/ish-shell/id1436902243" class="article-hyperlinks">click on this link</a> and install the app
+- The app is slightly under 6MB and should not take very long to install
+
+## Step 2: update packages
+- First run the command 

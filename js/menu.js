@@ -10,13 +10,13 @@ var menu = {
      l8 : "Testing3", // for the more menu
 
      // links 
-     link1 : 'index.html',  // simply change these to change menu for whole site 
-     link2 : "about.html", 
-     link3 : "games.html", 
-     link4 : "nft.html", 
+     link1 : 'index.php',  // simply change these to change menu for whole site 
+     link2 : "mailtest.php", 
+     link3 : "games.php", 
+     link4 : "nft.php", 
      link5 : "more.html", 
      
-     link6 : "sports.html", 
+     link6 : "sports.php", 
      link7 : "more.html", 
      link8 : "more.html", 
     
@@ -39,7 +39,6 @@ var menu = {
      start : () => { 
          // place bet when round starts  
          menu.one.innerHTML = menu.l1; 
-         menu.two.innerHTML = menu.l2; 
          menu.three.innerHTML = menu.l3; 
          menu.four.innerHTML = menu.l4; 
          menu.five.innerHTML = menu.l5;
@@ -48,7 +47,6 @@ var menu = {
          menu.seven.innerHTML = menu.l7;
          menu.eight.innerHTML = menu.l8;
          menu.one = document.getElementById("menu1").href = menu.link1; 
-         menu.two = document.getElementById("menu2").href = menu.link2; 
          menu.three = document.getElementById("menu3").href = menu.link3; 
          menu.four = document.getElementById("menu4").href = menu.link4; 
          //menu.five = document.getElementById("menu5").href = menu.link5;

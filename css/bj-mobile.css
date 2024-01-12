@@ -1,0 +1,251 @@
+/* for beter mobile experience playing game */
+
+
+@font-face {
+    font-family: digifont;
+    src: url(../fonts/digital.ttf);
+}
+
+/* Define CSS variables for colors */
+:root {
+  --deal-data-bg: #c9e1ff;
+  --deal-card-bg: #e4f0ff;
+  --play-data-bg: #ffcfcf;
+  --play-card-bg: #ffe7e7;
+  --play-control-bg: #f2daff;
+  
+  --bet-bg: #00c8ff;
+  --bank-bg: #a5ebff;
+  --stand-color: #fff;
+  --stand-bg: #ab2323;
+  
+  --controls-bg: #4381de;
+  --betup-bg: #00112c;
+  --betdown-bg: #001d47;
+  --game-text-color: black;
+  
+  --refreshbtn-bg: #a5ebff;
+}
+/* Dark mode styles */
+.dark-mode {
+  --deal-data-bg: #0057c2;
+  --deal-card-bg: #006cf0;
+  --play-data-bg: #c40000;
+  --play-card-bg: #e74242;
+  --play-control-bg: #290088;
+  
+  --bet-bg: #0049b6;
+  --bank-bg: #0091b9;
+  --stand-color: #e2e2e2;
+  --stand-bg: #ab2323;
+  
+  --controls-bg: #4381de;
+  --betup-bg: #00112c;
+  --betdown-bg: #001d47;
+  --game-text-color: #010014;
+  
+  --refreshbtn-bg: #a5ebff;
+}
+
+
+@media only screen and (orientation: portrait) {
+    /* (B) DEALER & PLAYER */
+    /* (B1) CONTAINERS */
+    #deal-data, #play-data, #play-control, #bank, #p-bet { font-family: digifont, sans-serif; }
+    #deal-data, #play-data, #deal-cards, #play-cards, #play-control { padding: 20px; }
+    #deal-data, #play-data { font-weight: 700; }
+    /* #deal-cards, #play-cards { min-height: 24px; } */
+    #deal-data { background: var(--deal-data-bg); }
+    #deal-cards { background: var(--deal-card-bg); }
+    #play-data { background: var(--play-data-bg); }
+    #play-cards { background: var(--play-card-bg); }
+    #play-control { background: var(--play-control-bg); }
+    
+	#game-container {
+		height: 90vh;
+		width: 95vw;
+		padding-left: 5vw;
+		color: var(--game-text-color);
+	}
+    #p-bet { 
+        border-style: solid;
+        padding: 10px;
+        background: var(--bet-bg);
+    }
+    #bank { 
+        border-style: solid;
+        padding: 10px;
+        background: var(--bank-bg);
+    }
+	#refresh-bal {
+		text-align: right;
+		background: var(--refreshbtn-bg);
+		border: none;
+	}
+    
+    
+    #deal-stand, #play-stand {
+    display: none; padding: 5px;
+    color: var(--stand-color); background: var(--stand-bg);
+    }
+    #deal-stand.stood, #play-stand.stood { display: inline-block; }
+
+    /* (B2) CARDS */
+    #deal-cards, #play-cards {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: solid;
+    }
+    .bj-card {
+    display: flex;
+    align-items: center; justify-content: center;
+    margin: 5px;
+    /* width: 10%; height: 10%;*/
+    font-size: 2.25em;
+    text-align: center;
+    background: #fff;
+    }
+    #deal-first .front { display: none; }
+    #deal-first.show .back { display: none; }
+    #deal-first.show .front { display: block; }
+
+    #play-data, #deal-data, #bank, #p-bet { font-size: 1.25em; }
+
+    /* (C) PLAY CONTROLS */
+    #playc-hit, #playc-stand, #playc-start {
+    display: flex;
+    /* cursor: pointer; */
+    font-weight: 700;
+    padding: 10px 20px;
+    width: 35vw; 
+    border: 0;
+    color: #fff;
+    background: var(--controls-bg);
+    }
+    #bet-up {
+    justify-content: right;
+    font-weight: 700;
+    padding: 10px 10px;
+    border: 0;
+    color: #fff;
+    background: var(--betup-bg);
+	width: 15vw;
+    }
+    #bet-down {
+    justify-content: right;
+    font-weight: 700;
+    padding: 10px 10px;
+    border: 0;
+    color: #fff;
+    background: var(--betdown-bg);
+	width: 15vw;
+    }
+
+    #playc-hit, #playc-stand, #playc-start, #bet-up, #bet-down { font-size: 100%; }
+    #playc-start, #bet-up, #bet-down { display: inline-block; }
+    #playc-hit, #playc-stand { display: none; }
+    #play-control.started #playc-start { display: none; }
+    #play-control.started #bet-up, #play-control.started #bet-down { display: none; }
+    #play-control.started #playc-hit, #play-control.started #playc-stand { display: inline-block; }
+}
+
+
+/* non mobile */
+#deal-data, #play-data, #play-control, #bank, #p-bet { font-family: digifont, sans-serif; }
+#deal-data, #play-data, #deal-cards, #play-cards, #play-control { padding: 20px; }
+#deal-data, #play-data { font-weight: 700; }
+/* #deal-cards, #play-cards { min-height: 24px; } */
+#deal-data { background: var(--deal-data-bg); }
+#deal-cards { background: var(--deal-card-bg); }
+#play-data { background: var(--play-data-bg); }
+#play-cards { background: var(--play-card-bg); }
+#play-control { background: var(--play-control-bg); }
+
+#game-container {
+    height: 90vh;
+    width: 95vw;
+    padding-left: 5vw;
+    color: var(--game-text-color);
+}
+#p-bet { 
+    border-style: solid;
+    padding: 10px;
+    background: var(--bet-bg);
+}
+#bank { 
+    border-style: solid;
+    padding: 10px;
+    background: var(--bank-bg);
+}
+#refresh-bal {
+    text-align: right;
+    background: var(--refreshbtn-bg);
+    border: none;
+}
+#refresh-bal:hover {
+    background-color: #4903fc;
+}
+
+#deal-stand, #play-stand {
+display: none; padding: 5px;
+color: var(--stand-color); background: var(--stand-bg);
+}
+#deal-stand.stood, #play-stand.stood { display: inline-block; }
+
+/* (B2) CARDS */
+#deal-cards, #play-cards {
+display: flex;
+flex-wrap: wrap;
+border-bottom: solid;
+}
+.bj-card {
+display: flex;
+align-items: center; justify-content: center;
+margin: 5px;
+/* width: 10%; height: 10%;*/
+font-size: 2.25em;
+text-align: center;
+background: #fff;
+}
+#deal-first .front { display: none; }
+#deal-first.show .back { display: none; }
+#deal-first.show .front { display: block; }
+
+#play-data, #deal-data, #bank, #p-bet { font-size: 1.25em; }
+
+/* (C) PLAY CONTROLS */
+#playc-hit, #playc-stand, #playc-start {
+display: flex;
+/* cursor: pointer; */
+font-weight: 700;
+padding: 10px 20px;
+width: 35vw; 
+border: 0;
+color: #fff;
+background: var(--controls-bg);
+}
+#bet-up {
+justify-content: right;
+font-weight: 700;
+padding: 10px 10px;
+border: 0;
+color: #fff;
+background: var(--betup-bg);
+width: 15vw;
+}
+#bet-down {
+justify-content: right;
+font-weight: 700;
+padding: 10px 10px;
+border: 0;
+color: #fff;
+background: var(--betdown-bg);
+width: 15vw;
+}
+
+#playc-hit, #playc-stand, #playc-start, #bet-up, #bet-down { font-size: 100%; }
+#playc-start, #bet-up, #bet-down { display: inline-block; }
+#playc-hit, #playc-stand { display: none; }
+#play-control.started #playc-start { display: none; }
+#play-control.started #bet-up, #play-control.started #bet-down { display: none; }
+#play-control.started #playc-hit, #play-control.started #playc-stand { display: inline-block; }

@@ -1,0 +1,24 @@
+.dark-mode {
+	--th-bg: #013b8c; /* Change the background color to black */
+	--tr-bg: #0385ff; /* Change the text color to white */
+	--tr2-bg: #03c4ff; /* Change the link color to white */
+}
+
+.leaderboard {
+	width: 90vw;
+	margin: auto;
+}
+
+.dark-mode .leaderboard table {
+	border-color: black;
+}
+
+th {
+	background-color: var(--th-bg);
+}
+
+td {
+	background-color: var(--tr2-bg);
+}
+
+tr:nth-child(even) {background-color: var(--tr-bg);}

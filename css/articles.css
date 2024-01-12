@@ -1,0 +1,49 @@
+:root {
+	--link-color: #039dfc; /* Change the text color to white */
+}
+/* Dark mode styles */
+.dark-mode {
+	--link-color: #03dbfc; /* Change the text color to white */
+}
+
+.article-text {
+	width: 90vw;
+	margin: auto;
+}
+
+.article-text ul, .article-text ol {
+	width: 75vw;
+	margin: auto;
+}
+
+.article-text img {
+	width: 60vw;
+	margin: auto;
+}
+
+.article-text a {
+	color: var(--link-color);
+	text-decoration: none;
+}
+
+.article-text h2 {
+	font-size: 1.5em;
+	padding-bottom: 1vh;
+}
+
+.article-title {
+	width: 90vw;
+	margin: auto;
+	font-size: 1.75em;
+}
+.nfl-subtitle {
+	font-size: 1em;
+	font-style: italic;
+	margin-bottom: 25px;
+	color: var(--subtext-color);
+}
+
+.article img {
+	border-radius: 10px;
+	width: 85vw;
+}

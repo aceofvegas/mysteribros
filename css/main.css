@@ -1,4 +1,8 @@
 /* Add your custom styles here */
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,32 +20,52 @@
   --nav-text: white;
   --text-color: black;
   --link-color: blue;
-  --button-color: blue;
+  --button-color: #05b8ff;
   --button-text-color: white;
   --subtext-color: #2b2b2b;
   --drophov-color: #0044ff;
+  --reset-pass-btn: yellow;
+  --reset-text: black;
+  --logout-btn: red;
+  --logout-text: white;
 }
 /* Dark mode styles */
 .dark-mode {
   --background-color: #000018; /* Change the background color to black */
   --text-color: white; /* Change the text color to white */
   --link-color: white; /* Change the link color to white */
-  --button-color: blue; /* Change the button color to red */
+  --button-color: #05b8ff; /* Change the button color to red */
   --nav-color: #000000;
   --nav-text: rgb(233, 233, 233);
   --subtext-color: #c2c2c2;
   --drophov-color: #0044ff;
+  --reset-pass-btn: yellow;
+  --reset-text: black;
+  --logout-btn: red;
+  --logout-text: white;
 }
 
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+}
+
+#seeapi {
+	width: 80vw;
+}
+.yourkey {
+	max-width: 80vw;
 }
 
 .container {
   max-width: vw100;
   margin: 0 auto;
+}
+
+.wrapper {
+	max-width: vw100;
 }
 
 .logo {
@@ -59,7 +83,7 @@ body {
   display: flex;
   flex-grow: 1; /* Add this to make the nav take up the full width */
   background-color: var(--nav-color);
-  width: 100%;
+  width: 100vw;
   padding: 0.4em;
   font-family: lownue;
 }
@@ -180,10 +204,17 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-
+.story {
+	padding-bottom: 5px;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+}
 
 .story img {
   width: 100%;
+  border-radius: 10px;
+  height: 22vh;
+  object-fit: cover;
 }
 
 .story h3 {
@@ -201,6 +232,7 @@ body {
   text-decoration: none;
   color: var(--button-text-color);
   background-color: var(--button-color);
+  border-radius: 10px;
 }
 
 .sports-header {
@@ -214,7 +246,7 @@ body {
 
 .sports-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -231,7 +263,7 @@ body {
   padding: 10px;
 }
 
-.sport a {
+.sport .sportlink {
   display: block;
   padding: 10px;
   text-align: center;
@@ -239,6 +271,7 @@ body {
   color: var(--button-text-color);
   background-color: var(--button-color);
 }
+
 
 footer {
   padding: 20px;
@@ -251,7 +284,7 @@ footer {
   width: 400px;
   width: 75%;
   height: 250px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .article-title {
@@ -331,6 +364,32 @@ footer {
 .gallery img { 
   width: 100%; 
   height: auto; 
+}
+
+.welcome-page {
+	width: 90vw;
+	margin: auto;
+	font-family: 'Manrope', sans-serif;
+}
+.res-pass-btn {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--reset-text);
+  background-color: var(--reset-pass-btn);
+  border-radius: 10px;
+  margin: 2.5vh;
+}
+.logout-btn {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--logout-text);
+  background-color: var(--logout-btn);
+  border-radius: 10px;
+  margin: 2.5vh;
 }
 
 /* Media queries for different device widths */

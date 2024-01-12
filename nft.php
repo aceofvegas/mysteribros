@@ -1,40 +1,30 @@
+<?php
+// Initialize the session
+if (session_status() == PHP_SESSION_NONE) {
+	session_start();
+}
+
+ function get_uid(){
+    // Check if the user is logged in, if not then redirect him to login page
+    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+        echo htmlspecialchars("Login");
+    }
+    else {
+        echo htmlspecialchars($_SESSION["username"]); 
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php require 'php/head.php'; ?>
     <title>NFTs</title>
-	<link rel="icon" type="image/x-icon" href="img/favi.png">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/darkmode.js"></script>
-<script src="js/menu.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="logo">
-                <img src="img/logo.png" alt="Logo">
-            </div>
-            <div class="nav">
-                <a id="menu1" href="#home">Home</a>
-                <a id="menu2" href="#">News</a>
-                <a id="menu3" href="#">News</a>
-                <a id="menu4" href="#">News</a>
-                <div class="dropdown">
-                    <button id="menu5" class="dropbtn">More
-                    <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                    <a id="more1" href="#">Link 1</a>
-                    <a id="more2" href="#">Link 2</a>
-                    <a id="more3" href="#">Link 3</a>
-                    </div>                
-                </div>
-                <button  id="dark-mode-button" onclick="toggleDarkMode()">💡</button>
-            </div>
-            <div class="toggle">
-                
-            </div>
+            <?php require 'php/header.php'; ?>
         </header>
         <main>
                 <div class="gallery"> 
@@ -57,8 +47,7 @@
         </main>
         
         <footer>
-            <!-- Add your footer content here -->
-            <p>&copy; 2023 MysteriBros LLC. All rights reserved.</p>
+            <?php require 'php/footer.php'; ?>
         </footer>
     </div>
 </body>
